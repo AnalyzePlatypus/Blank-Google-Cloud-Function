@@ -11,7 +11,7 @@ Serverless is awesome!
 # Make sure you have the emulator installed (See #Installation)
 mkdir myFunction
 cd myFunction
-git clone "https://github.com/AnalyzePlatypus/Blank-Google-Cloud-Function/"
+git clone git@github.com:AnalyzePlatypus/Blank-Google-Cloud-Function.git
 npm install
 
 npm run start-server # Start the dev server
