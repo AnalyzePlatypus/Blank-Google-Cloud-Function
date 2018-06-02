@@ -1,0 +1,17 @@
+{
+    "name": "blank_cloud_function",
+    "readme": "readme.md",
+    "version": "0.0.1",
+    "main": "index.js",
+    "author": "Michoel Samuels",
+    "license": "MIT",
+    "dependencies": {},
+    "scripts": {
+        "start-server": "functions start",
+        "stop-server": "functions stop",
+        "deploy-local": "functions deploy main --trigger-http && functions call main",
+        "call": "functions call main",
+        "open-logs": "functions logs call",
+        "build": "bash scripts/build.sh"
+    }
+}
