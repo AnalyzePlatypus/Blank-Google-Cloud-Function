@@ -1,16 +1,24 @@
-# Readme
+# Blank Google Cloud Function
 
-## About this project
+Serverless is awesome! 
+* Develop awesome Cloud Functions locally on your machine, 
+* Deploy and test Functions locally (Uses the [emulator](https://github.com/GoogleCloudPlatform/cloud-functions-emulator))
+* Build uploadable archives for deploying to Google Cloud.
 
-To get started, make sure you have all the depencies installed.
-See [Installation](/#installation).
+## Quick Start
 
-## Demo
+```bash
+# Make sure you have the emulator installed (See #Installation)
+mkdir myFunction
+cd myFunction
+git clone "https://github.com/AnalyzePlatypus/Blank-Google-Cloud-Function/"
+npm install
 
-Put a link to your live version [here](#).
+npm run start-server # Start the dev server
+npm run deploy-local # Deploy the function and call it once
+```
 
-
-## Developement
+## Development
 
 ### Installation
 
@@ -26,11 +34,17 @@ First, spin up the cloud emulator:
 npm run start-server
 ```
 
-After every change, deploy the function locally. This will deploy the function and call it once.
+Make your changes to `index.js`.
+
+Use `npm install <package> --save` to install any dependencies you need (GCP automatically installs `npm` packages in the cloud).
+
+Deploy your function locally using: 
 
 ```bash
 npm run deploy-local
 ```
+
+This will deploy the function and call it once.
 
 To call it again, run:
 
@@ -96,3 +110,5 @@ For a rapid workflow, I like chaining both operations, so I can build and run my
 ```bash
 functions deploy myFunction --trigger-http && functions call myFunction
 ```
+
+This is what `npm run deploy-local` uses.
