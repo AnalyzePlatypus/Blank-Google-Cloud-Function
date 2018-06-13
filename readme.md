@@ -80,7 +80,7 @@ On the Google Cloud webapp:
 1. Create a new function
 2. Choose "Upload an Archive"
 3. Upload the generated archive.
-4. Set 'Function to execute' to `main` 
+4. Set 'Function to execute' to `main`
 
 ## About the Files
 
@@ -108,3 +108,18 @@ functions deploy myFunction --trigger-http && functions call myFunction
 ```
 
 This is what `npm run deploy-local` uses.
+
+
+### A Note About Function Names
+
+__Please note__: The emulator server is global - all your functions can see - and overwrite - other functions with the same name.
+If you do not change this, your new function will replace any others deployed to the emulator with the same name.
+This may not matter, as you can always redeploy the other functions from their own repos, and you probably don't want them piling up on disk anyway.
+
+The default name for your function is `main`.
+If you want to change it, changes must be made in:
+
+* `index.js` - Change `exports.default = <newName> () {...}`
+* `package.json` - Change the run scripts to point at the new name:
+  * `deploy-local` should be `functions deploy <newName> --trigger-http && functions call <newName>`
+  * `call` should be `functions call <newName>`
