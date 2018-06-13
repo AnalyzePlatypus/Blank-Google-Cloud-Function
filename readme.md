@@ -9,9 +9,8 @@ Serverless is awesome!
 
 ```bash
 # Make sure you have the emulator installed (See #Installation)
-mkdir myFunction
-cd myFunction
 git clone git@github.com:AnalyzePlatypus/Blank-Google-Cloud-Function.git
+cd Blank-Google-Cloud-Function
 npm install
 
 npm run start-server # Start the dev server
@@ -36,7 +35,7 @@ npm run start-server
 
 Make your changes to `index.js`.
 
-Use `npm install <package> --save` to install any dependencies you need (GCP automatically installs `npm` packages in the cloud).
+Use `npm install <package> --save` to install any dependencies you need (When you deploy to Google Cloud, your packages will be installed and managed for you on Google's infrastructure).
 
 Deploy your function locally using: 
 
@@ -81,15 +80,12 @@ On the Google Cloud webapp:
 1. Create a new function
 2. Choose "Upload an Archive"
 3. Upload the generated archive.
+4. Set 'Function to execute' to `main` 
 
 ## About the Files
 
 * `index.js` is where all your logic goes.
 * `package.json` is where you list your dependencies.
-
-### Other
-
-* `launch.json` is a config file for the VSCode debugger.
 
 ## Appendix
 
