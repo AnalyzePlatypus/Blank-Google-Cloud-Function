@@ -1,9 +1,12 @@
 # Blank Google Cloud Function
 
 Serverless is awesome! 
-* Develop awesome Cloud Functions locally on your machine, 
+
+This template makes it easy to:
+
+* Develop awesome Cloud Functions locally on your machine
 * Deploy and test Functions locally (Uses the [emulator](https://github.com/GoogleCloudPlatform/cloud-functions-emulator))
-* Build uploadable archives for deploying to Google Cloud.
+* Build uploadable archives for deploying to Google Cloud
 
 ## Quick Start
 
